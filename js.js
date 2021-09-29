@@ -7,8 +7,10 @@ $(document).ready(function(){
           url:"adatok.json",
            success : function(result){
              result.adatok.forEach((value)=>{allatokTomb.push(value)})    
+             
             }
         }
+
         );
         $.ajax(
             {
@@ -18,7 +20,14 @@ $(document).ready(function(){
              }
         }
       );
+      $(".nyomtat").on("click",nyomtatatasa);
       function tablazatletrehozas(){
 
       }
+      function nyomtatatasa(){
+        
+        window.print("index.html");
+        
+      }
+
   });
