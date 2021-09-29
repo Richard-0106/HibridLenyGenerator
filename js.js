@@ -8,6 +8,7 @@ $(document).ready(function () {
       success: function (result) {
         result.allatlista.forEach((value) => { allatokTomb.push(value) })
       }
+
     }
   );
   $.ajax(
@@ -19,6 +20,8 @@ $(document).ready(function () {
       }
     }
   );
+  $(".nyomtat").on("click",nyomtatatasa);
+
   function tablazatletrehozas() {
       $("section").empty()
     $("section").append("<table></table>")
@@ -67,4 +70,10 @@ $(document).ready(function () {
 }
  
 }
+function nyomtatatasa(){
+        
+  window.print("index.html");
+  
+}
 });
+
