@@ -6,7 +6,7 @@ $(document).ready(function(){
         {
           url:"adatok.json",
            success : function(result){
-             result.adatok.forEach((value)=>{allatokTomb.push(value)})    
+             result.allatlista.forEach((value)=>{allatokTomb.push(value)})    
             }
         }
         );
@@ -14,7 +14,7 @@ $(document).ready(function(){
             {
             url:"osztaly.json",
              success : function(result){
-               result.osztaly.forEach((value)=>{tanulokTomb.push(value)})    
+               result.tanulolista.forEach((value)=>{tanulokTomb.push(value)})    
              }
         }
       );
