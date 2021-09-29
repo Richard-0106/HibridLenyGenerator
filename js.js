@@ -19,8 +19,6 @@ $(document).ready(function () {
       }
     }
   );
-
-
   function tablazatletrehozas() {
     $("section").append("<table></table>")
     for (let i = 0; i < tanulokTomb.length; i++) {
