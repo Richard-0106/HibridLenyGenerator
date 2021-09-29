@@ -15,13 +15,14 @@ $(document).ready(function () {
       url: "osztaly.json",
       success: function (result) {
         result.tanulolista.forEach((value) => { tanulokTomb.push(value) })
-        tablazatletrehozas()
+        $("select").on("change", rendezesOption);
       }
     }
   );
 
 
   function tablazatletrehozas() {
+      $("section").empty()
     $("section").append("<table></table>")
     for (let i = 0; i < tanulokTomb.length; i++) {
       const element = tanulokTomb[i]
@@ -39,4 +40,33 @@ $(document).ready(function () {
       $("table tr").eq(i).append("<td>" + allatokTomb[szam] + "</td><td>" + allatokTomb[szam2] + "</td><td>" + allatokTomb[szam3] + "</td>")
     }
   }
+  function rendezesOption() {
+    var id = $(this).val();
+    console.log(id)
+    switch(id) {
+  case "IRU1/A":
+    tablazatletrehozas()
+    break ;
+
+  case "IRU2/A":
+    tablazatletrehozas()
+    break;
+
+    case "SZF1/A":
+        tablazatletrehozas()
+    break ;
+
+    case "SZF2/A":
+        tablazatletrehozas()
+    break ;
+
+    case "sZF1/B":
+        tablazatletrehozas()
+    break ;
+
+  default:
+ 
+}
+ 
+}
 });
